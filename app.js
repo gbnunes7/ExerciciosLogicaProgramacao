@@ -1,0 +1,101 @@
+//1 Faça um algoritmo que leia os valores de A, B, C e em seguida imprima na tela a soma entre A e B é mostre se a soma é menor que C.
+
+// const a = parseInt(prompt("Digite o número para variável A."))
+// const b = parseInt(prompt("Digite o número para variável B."))
+// const c = parseInt(prompt("Digite o número para variável C."))
+// const somaAB = parseInt(a + b)
+// const verificacao = somaAB > c ? "a soma é maior que o valor da variável C" : "a soma é menor que o valor da variável C"
+
+// isNaN(a) || isNaN(b) || isNaN(c) ? alert("Digite números válidos.") : (alert(`A soma entre a variavel A e B é ${somaAB} e ${verificacao}`))
+    
+// 2 - Faça um algoritmo para receber um número qualquer e imprimir na tela se o número é par ou ímpar, positivo ou negativo.
+
+// //Solicita o número para o usuário
+// const numero = parseInt(prompt("Digite seu número."));
+
+// //Verificação se é positivo ou negativo
+// const validacaoPositivo = numero >= 0 ? `positivo` : `negativo`
+
+// //Verificação se é par ou impar
+// const validacaoParImpar = numero % 2 == 0 ? `par`: `impar`
+
+// // Validação se é um número e sendo um número exibe o se é impar ou par, e postivio ou negativo.
+// isNaN(numero) ? alert("Digite um número valido.") : alert(`O número escolhido é ${numero} ele é ${validacaoPositivo}, e ${validacaoParImpar}.`)
+
+// 3 - Faça um algoritmo que leia dois valores inteiros A e B, se os valores de A e B forem iguais, deverá somar os dois valores, 
+
+
+// // Solicita o número para A
+// const a = parseInt(prompt("Digite o número para variável A")) 
+
+// // Solicita o número para B
+// const b = parseInt(prompt("Digite o número para variável B"))
+
+// //Para usar o "Return" em uma validação a fim de parar a validação é preciso usar dentro de uma function
+
+// function validacao() {
+//     let c; // Inicializei a variável C
+
+//     if (isNaN(a) || isNaN(b)) {
+//         alert('Digite um valor válido.')
+//         return
+//     } // Validação se é um número, caso não seja quebra no return
+
+//     if (a === b) {
+//         c = a + b
+//     } else {
+//         c = a * b
+//     } // reatribuição do valor de C, para cada condicional
+    
+//     console.log(c) // Exibição de C
+// }
+
+// validacao(); // Chamando a função
+
+//4 - Faça um algoritmo que receba um número inteiro e imprima na tela o seu antecessor e o seu sucessor.
+
+// const numero = parseInt(prompt("Digite aqui o número.")) // Solicitando número
+
+// function validacao() {
+//     if (isNaN(numero)) {
+//         alert('Digite um valor válido.')
+//         return
+//     } // Validação se é número
+
+//     console.log("Antecessor: " + (numero - 1), "Número: " + numero, "Sucessor: " + (numero+1)) // lógica
+// }
+
+// validacao();
+
+// 5 - Faça um algoritmo que leia o valor do salário mínimo e o valor do salário de um usuário, calcule quantos salários mínimos esse usuário ganha e imprima na tela o resultado. (Base para o Salário mínimo R$ 1.293,20).
+
+// const salarioMinimo = Number(1293.20)
+// const salarioUsuario = Number(prompt("Digite seu salário atual."))
+
+// const qntSalarioMin = salarioUsuario/salarioMinimo
+
+// console.log(qntSalarioMin.toFixed(2))
+
+// 6 - Faça um algoritmo que leia um valor qualquer e imprima na tela com um reajuste de 5%.
+
+// function validacao() {
+//     const valor = Number(prompt("Digite qualquer valor"));
+//     const reajuste = 0.05;
+//     const valorNovo = valor + (valor*reajuste)
+
+//     if (isNaN(valor)) {
+//         alert('Digite um valor válido.')
+//         return
+//     } // Validação se é número
+
+//     // console.log(`Seu valor é R$${valor.toString().replace('.',',')} com um reajuste de ${reajuste.toString().replace('.',',')} seria valor novo de: R$${ Separar variaveis
+
+//     const valorFormatado = valor.toFixed(2).toString().replace('.',',');
+//     const valorNovoFormatado = valorNovo.toFixed(2).toString().replace('.',',');
+
+//     console.log(`Seu valor inicial é de R$${valorFormatado} com um reajuste de 5% o novo valor seria de R$${valorNovoFormatado}.`)
+// }
+
+
+// validacao()
+
