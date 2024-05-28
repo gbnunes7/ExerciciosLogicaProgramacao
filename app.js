@@ -99,3 +99,98 @@
 
 // validacao()
 
+// 8 - faça um algoritmo que leia três valores inteiros diferentes e imprima na tela os valores em ordem decrescente.
+
+// function validacao() {
+//     // coletando valores
+//     const valor1 = parseInt(prompt("Digite um valor:"))
+//     const valor2 = parseInt(prompt("Digite um valor:"))
+//     const valor3 = parseInt(prompt("Digite um valor:"))
+//     //inicializando array 
+//     const valores = [];
+//     //Lógica de validação de número
+//     if (isNaN(valor1) || isNaN(valor2) || isNaN(valor3)) {
+//         alert('Digite um valor válido.')
+//         return
+//         } 
+//         // lógica de validação se os números são diferentes
+//         else if (valor1 != valor2 && valor2 != valor3 && valor1 != valor3) {
+//             // lógica usando sort() para deixar em valores decrescentes
+//             valores.push(valor1,valor2,valor3);
+//             valores.sort((a,b)=> b-a)
+//             console.log(valores)
+//         } else {
+//             alert("Digite valores diferentes.")
+//         }
+// }
+// // validacao();
+
+// 9 - Faça um algoritmo que calcule o IMC (Índice de Massa Corporal) de uma pessoa, leia o seu peso e sua altura e imprima na tela sua condição -- Fazxer dps
+
+// de acordo com a tabela abaixo:
+
+// Fórmula do IMC = peso / (altura) ²
+
+// Tabela Condições IMC
+
+  
+
+//  Abaixo de 18,5   | Abaixo do peso          
+
+//  Entre 18,6 e 24,9 | Peso ideal (parabéns)  
+
+//  Entre 25,0 e 29,9 | Levemente acima do peso
+
+//  Entre 30,0 e 34,9 | Obesidade grau I 
+
+//  Entre 35,0 e 39,9 | Obesidade grau II (severa)
+
+//  Maior ou igual a 40 | Obesidade grau III (mórbida)
+
+// 10 - Faça um algoritmo que leia três notas obtidas por um aluno, e imprima na tela a média das notas.
+
+
+let continua = true;
+const notas = [];
+let somaNotas = 0
+
+
+while(continua) {
+    let nota = parseInt(prompt("Insira as notas das provas"));
+    validacao(nota);
+    const limite = prompt("Deseja continuar adicionando notas?");
+    if (limite == "sim") {
+        continua = true
+    } else {
+        continua = false
+    }
+}
+
+function validacao(x) {
+    if(isNaN(x)) {
+        alert("Digite um valor válido.")
+        return
+    } else {
+        notas.push(x)
+    }
+}
+
+function calculaNotas(array) {
+    let i = 0
+
+    while ( i < array.length) {
+        somaNotas += array[i]
+        i++
+    }
+    return somaNotas
+}
+
+function calculaMedia(notasSomadas,array) {
+    return (notasSomadas / array.length)
+    
+}
+
+calculaNotas(notas)
+console.log(notas)
+console.log("A média desse aluno foi de: " + calculaMedia(somaNotas, notas))
+
