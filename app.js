@@ -147,49 +147,157 @@
 
 //  Maior ou igual a 40 | Obesidade grau III (mórbida)
 
-// 10 - Faça um algoritmo que leia três notas obtidas por um aluno, e imprima na tela a média das notas.
+// 10 e 11- Faça um algoritmo que leia três notas obtidas por um aluno, e imprima na tela a média das notas.
 
 
-let continua = true; //Entrada de variavel para limitar o laço de repetição
-const notas = []; // Entrada de variavel para array
-const somaNotas = 0 // Entrada de variavel para somar as notas do array
+//  let continua = true; //Entrada de variavel para limitar o laço de repetição
+//  const notas = [];  //Entrada de variavel para array
+//  let somaNotas = 0  //Entrada de variavel para somar as notas do array
 
+//  while(continua) {
+//      const nota = parseInt(prompt("Insira as notas das provas"));
+//      validacao(nota);
+//      const limite = prompt("Deseja continuar adicionando notas?").toLowerCase();
+//      if (limite == "sim") {
+//          continua = true
+//      } else {
+//          continua = false
+//      }
+//  } // Laço de repetição 
 
-while(continua) {
-    // let nota = parseInt(prompt("Insira as notas das provas")); // trocar para const pois não vai ser reatribuida
-    const nota = parseInt(prompt("Insira as notas das provas"));
-    validacao(nota);
-    const limite = prompt("Deseja continuar adicionando notas?");
-    if (limite == "sim") {
-        continua = true
-    } else {
-        continua = false
-    }
-} // Laço de repetição 
+//  calculaNotas(notas) // Chamada da função
+//  const media = calculaMedia(somaNotas, notas)
+//  const apvRep = situacao(media)
 
-function validacao(x) {
-    if(isNaN(x)) {
-        alert("Digite um valor válido.")
-        return
-    } else {
-        notas.push(x)
-    }
-} // Validação das notas inseridas se são números ou o usuário colocou dados errados
+//  function validacao(x) {
+//      if(isNaN(x)) {
+//          alert("Digite um valor válido.")
+//          return
+//      } else {
+//          notas.push(x)
+//      }
+//  }  //Validação das notas inseridas se são números ou o usuário colocou dados errados
 
-function calculaNotas(array) {
-    let i = 0
+//  function calculaNotas(array) {
+//      let i = 0
 
-    while ( i < array.length) {
-        somaNotas += array[i]
-        i++
-    }
-    return somaNotas
-} // Função para calcular todas as notas do array
+//      while ( i < array.length) {
+//          somaNotas += array[i]
+//          i++
+//      }
+//      return somaNotas
+//  } // Função para calcular todas as notas do array
 
-function calculaMedia(notasSomadas,array) {
-    return Math.round(notasSomadas / array.length)
-} // Função que calcula média das notas do usuário
+//  function calculaMedia(notasSomadas,array) {
+//      return Math.round(notasSomadas / array.length) 
+//  } // Função que calcula média das notas do usuário
 
-calculaNotas(notas) // Chamada da função
-console.log("A média desse aluno foi de: " + calculaMedia(somaNotas, notas)) // Chamada da função de média e exibição no console
+//  function situacao(media) {
+//     return media >= 7 ? "aprovado." : "Reprovado"
+//  }
 
+//  console.log("A média desse aluno foi de: " + media + ". E está " + apvRep) // Chamada da função de média e exibição no console
+
+//12 Faça um algoritmo que leia o valor de um produto e determine o valor que deve ser pago, conforme a escolha da forma de pagamento pelo comprador e imprima na tela o valor final do produto a ser pago. Utilize os códigos da tabela de condições de pagamento para efetuar o cálculo adequado.
+
+// const valorProduto = Number(prompt("Qual valor do produto?"));
+// let valorFinal = 0
+
+// function formaPag() {
+//     const formaDePag = Number(prompt("Forma de pagamento: 1- À vista em pix ou dinheiro 2- À vista no cartão de crédito 3- Parcelado no cartão em 2x 4- Parcelado no cartão em 3+"))
+//     if (formaDePag == 1){
+//         let desconto = valorProduto * 0.15
+//         valorFinal = valorProduto - desconto
+//         console.log(valorFinal)
+//     } else if (formaDePag == 2) {
+//         desconto = valorProduto * 0.10
+//         valorFinal = valorProduto - desconto
+//         console.log(valorFinal)
+//     } else if (formaDePag == 3) {
+//         valorFinal = valorProduto/2
+//         console.log(`Valor do produto é, R$${valorProduto} parcelado em 2x de R$${valorFinal}`)
+//     } else if (formaDePag == 4) {
+//         const parcelas = Number(prompt("Deseja parcelar em quantas vezes?"))
+//         const juros = valorProduto*0.10
+//         valorFinal = (valorProduto + juros)/parcelas
+//         console.log(`Valor do produto é R$${valorProduto} parcelado em ${parcelas} de R$${valorFinal.toFixed(2)}`)
+//     }
+// }
+
+// formaPag();
+
+// 13  Faça algoritmo que leia o nome e a idade de uma peso e imprima na tela o nome da pessoa e se ela é maior ou menor de idade. 
+
+// const nome = prompt("Qual seu nome?");
+// const idade = Number(prompt("Qual sua idade?"))
+// maiorOuMenor(idade);
+
+// function maiorOuMenor(idade) {
+//     const maiorOuMenos = idade >= 18 ? "maior" : "menor"
+//     return console.log(`${nome} é ${maiorOuMenos} de idade.`)
+// }
+
+// 14 Faça um algoritmo que receba um valor A e B, e troque o valor de A por B e o valor de B por A e imprima na tela os valores.
+
+// let a = prompt("Qual valor de A")
+// let b = prompt("Qual valor de B")
+
+// let temp = a // so atribuir outra variavel ao valor de A
+// a = b
+// b = temp
+
+// console.log(a,temp)
+
+// 15Faça um algoritmo que leia o ano em que uma pessoa nasceu, imprima na tela quantos anos, meses e dias essa pessoa ja viveu. Leve em consideração o ano com 365 dias e o mês com 30 dias.
+
+// const ano = prompt("Qual ano de nascimento?")
+// const anosVividos = 2024 - ano
+// const mesesVividos = anosVividos * 12
+// const diasVividos = (mesesVividos*30) + 5
+
+// console.log(anosVividos,mesesVividos,diasVividos)
+
+// 16 Faça um algoritmo que leia três valores que representam os três lados de um triângulo e verifique se são válidos, determine se o triângulo é equilátero, isósceles ou escaleno.
+
+// const lado1 = Number(prompt("Qual tamanho do primeiro lado"))
+// const lado2 = Number(prompt("Qual tamanho do segundo lado"))
+// const lado3 = Number(prompt("Qual tamanho do terceiro lado"))
+
+// if (lado1 + lado2 > lado3 && lado2 + lado3 > lado1 && lado1 + lado3 > lado2)  {
+//     alert("Esse triangulo pode ser formado")
+
+//     if (lado1 == lado2 && lado2 ==lado3) {
+//         alert("Triangulo equilátero")
+//     }
+
+//     else if (lado1 == lado2 || lado2 == lado3 || lado3 == lado1) {
+//         alert("Triangulo Isósceles")
+//     }
+
+//     else if(lado1 != lado2 && lado2 != lado3 && lado3 != lado1) {
+//         alert("Triangulo escaleno")
+//     }
+
+// } else {
+//     alert("Não pode ser formado")
+// }
+
+//18 - Francisco tem 1,50m e cresce 2 centímetros por ano, enquanto Sara tem 1,10m e cresce 3 centímetros por ano. Faça um algoritmo que calcule e imprima na tela em quantos anos serão necessários para que Francisco seja maior que Sara.
+
+// let alturaFrancisco = 150
+// let alturaSara = 110
+// let tempo = 0
+
+// let saraMenor = true
+
+// while (saraMenor) {
+//     if (alturaSara > alturaFrancisco) {
+//         saraMenor = false
+//     } else {
+//         alturaFrancisco+= 2
+//         alturaSara += 3
+//         tempo +=1
+//     }
+//     console.log(tempo)
+// }
+// console.log(`É preciso de ${tempo} anos para que Sara seja maior que Francisco`)
