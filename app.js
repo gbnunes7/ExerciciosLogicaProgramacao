@@ -150,13 +150,14 @@
 // 10 - Faça um algoritmo que leia três notas obtidas por um aluno, e imprima na tela a média das notas.
 
 
-let continua = true;
-const notas = [];
-let somaNotas = 0
+let continua = true; //Entrada de variavel para limitar o laço de repetição
+const notas = []; // Entrada de variavel para array
+const somaNotas = 0 // Entrada de variavel para somar as notas do array
 
 
 while(continua) {
-    let nota = parseInt(prompt("Insira as notas das provas"));
+    // let nota = parseInt(prompt("Insira as notas das provas")); // trocar para const pois não vai ser reatribuida
+    const nota = parseInt(prompt("Insira as notas das provas"));
     validacao(nota);
     const limite = prompt("Deseja continuar adicionando notas?");
     if (limite == "sim") {
@@ -164,7 +165,7 @@ while(continua) {
     } else {
         continua = false
     }
-}
+} // Laço de repetição 
 
 function validacao(x) {
     if(isNaN(x)) {
@@ -173,7 +174,7 @@ function validacao(x) {
     } else {
         notas.push(x)
     }
-}
+} // Validação das notas inseridas se são números ou o usuário colocou dados errados
 
 function calculaNotas(array) {
     let i = 0
@@ -183,14 +184,12 @@ function calculaNotas(array) {
         i++
     }
     return somaNotas
-}
+} // Função para calcular todas as notas do array
 
 function calculaMedia(notasSomadas,array) {
-    return (notasSomadas / array.length)
-    
-}
+    return Math.round(notasSomadas / array.length)
+} // Função que calcula média das notas do usuário
 
-calculaNotas(notas)
-console.log(notas)
-console.log("A média desse aluno foi de: " + calculaMedia(somaNotas, notas))
+calculaNotas(notas) // Chamada da função
+console.log("A média desse aluno foi de: " + calculaMedia(somaNotas, notas)) // Chamada da função de média e exibição no console
 
