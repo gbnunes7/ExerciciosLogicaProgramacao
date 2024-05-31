@@ -301,3 +301,19 @@
 //     console.log(tempo)
 // }
 // console.log(`É preciso de ${tempo} anos para que Sara seja maior que Francisco`)
+
+function squareDigits(num){
+    const arrayNum = num.toString().split('');
+    let arrSquared = []
+  
+    for(let i = 0;i < arrayNum.length;i++) {
+      const digit = Number(arrayNum[i])
+      const squared = Math.pow(digit,2)
+      arrSquared.push(squared.toString())
+  }
+    const squaredConcatenados = arrSquared.join('');
+    const numeroFinal = Number(squaredConcatenados)
+    return numeroFinal  
+  }
+
+  console.log(squareDigits(412))
