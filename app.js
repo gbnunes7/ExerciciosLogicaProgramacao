@@ -384,8 +384,41 @@
 
 // const x = "8 j 8 mBliB8g imjB8B8 jl B"const array = x.split('')console.log(array)const novoArray = array.filter(elemento => elemento != ' ')const sss = novoArray.join('')console.log(sss)
 
-function noSpace(x) {
-  return x.replaceAll(' ', '');
+// Make a program that filters a list of strings and returns a list with only your friends name in it.
+
+// If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+
+// Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan", "Yous"]
+
+// const friend = friends => friends.filter(friend => friend.length == 4);
+
+// Write a function to split a string and convert it into an array of words.
+
+// function stringToArray(string){
+//     return string.split(' ');
+//   }
+
+
+function howMuchILoveYou(nbPetals) {
+    const msg = {
+      1: "I love you",
+      2: "a little",
+      3: "a lot",
+      4: "passionately",
+      5: "madly",
+      6: "not at all"
+    }
+  
+//   if (numero >= 7) {
+//     numero = numero % 6
+//     return msg[numero]
+//   } else {
+//     return msg[numero]
+//   }
+let numero = nbPetals % 6;
+if (numero === 0) numero = 6; // Handle the case when nbPetals is a multiple of 6
+
+return msg[numero];
 }
 
-console.log(noSpace("45235235m n n ujin             312      nijtnriuj"))
+console.log(howMuchILoveYou(282))
