@@ -302,18 +302,90 @@
 // }
 // console.log(`É preciso de ${tempo} anos para que Sara seja maior que Francisco`)
 
-function squareDigits(num){
-    const arrayNum = num.toString().split('');
-    let arrSquared = []
+// function squareDigits(num){
+//     const arrayNum = num.toString().split('');
+//     let arrSquared = []
   
-    for(let i = 0;i < arrayNum.length;i++) {
-      const digit = Number(arrayNum[i])
-      const squared = Math.pow(digit,2)
-      arrSquared.push(squared.toString())
-  }
-    const squaredConcatenados = arrSquared.join('');
-    const numeroFinal = Number(squaredConcatenados)
-    return numeroFinal  
-  }
+//     for(let i = 0;i < arrayNum.length;i++) {
+//       const digit = Number(arrayNum[i])
+//       const squared = Math.pow(digit,2)
+//       arrSquared.push(squared.toString())
+//   }
+//     const squaredConcatenados = arrSquared.join('');
+//     const numeroFinal = Number(squaredConcatenados)
+//     return numeroFinal  
+//   }
 
-  console.log(squareDigits(412))
+//   console.log(squareDigits(412))
+
+// function XO(str) {
+  
+//   const strSeparada = str.split('')
+//   let contadorX = 0
+//   let contadorO = 0
+  
+//   strSeparada.forEach(letra => {
+//     if (letra === 'x') {
+//        contadorX++
+//     } else if(letra === 'o') {
+//       contadorO++
+//     }
+//   })
+  
+// //   if (contadorX == contadorO) {
+//     return true
+//   } else if (contadorX != contadorO ) {
+//     return false
+//   }
+
+//   if (contadorX == 0 && contadorO == 0) {
+//     return true
+//   }
+  
+// }
+
+// console.log(XO("assa"))
+
+// function XO(str) {
+  
+//   const strSeparada = str.toLowerCase().split('')
+//   let contadorX = 0
+//   let contadorO = 0
+  
+//   strSeparada.forEach(letra => {
+//     if (letra === 'x') {
+//        contadorX++
+//     } else if(letra === 'o') {
+//       contadorO++
+//     } 
+//   })
+  
+//   if (contadorX == contadorO) {
+//     return true
+//   } else if (contadorX != contadorO) {
+//     return false
+//   }    
+  
+// }
+
+// const idadePai = 55
+// const idadeFilho = 30
+
+// const idadeFilhoDobro = idadeFilho * 2
+
+// const anos = idadePai - idadeFilhoDobro
+ 
+
+// if (anos > 0) {
+//   console.log(anos)
+// } else if (anos <= 0) {
+//   console.log (-(anos))
+// }
+
+// const x = "8 j 8 mBliB8g imjB8B8 jl B"const array = x.split('')console.log(array)const novoArray = array.filter(elemento => elemento != ' ')const sss = novoArray.join('')console.log(sss)
+
+function noSpace(x) {
+  return x.replaceAll(' ', '');
+}
+
+console.log(noSpace("45235235m n n ujin             312      nijtnriuj"))
