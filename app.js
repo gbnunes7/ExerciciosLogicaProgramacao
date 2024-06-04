@@ -399,26 +399,20 @@
 //   }
 
 
-function howMuchILoveYou(nbPetals) {
-    const msg = {
-      1: "I love you",
-      2: "a little",
-      3: "a lot",
-      4: "passionately",
-      5: "madly",
-      6: "not at all"
-    }
-  
-//   if (numero >= 7) {
-//     numero = numero % 6
-//     return msg[numero]
-//   } else {
-//     return msg[numero]
-//   }
-let numero = nbPetals % 6;
-if (numero === 0) numero = 6; // Handle the case when nbPetals is a multiple of 6
+// function howMuchILoveYou(nbPetals) {
+//     const msg = {
+//       1: "I love you",
+//       2: "a little",
+//       3: "a lot",
+//       4: "passionately",
+//       5: "madly",
+//       6: "not at all"
+//     }
+// let numero = nbPetals % 6;
+// if (numero === 0) numero = 6; // Caso seja multiplo de 6
 
-return msg[numero];
-}
+// return msg[numero];
+// }
 
-console.log(howMuchILoveYou(282))
+// console.log(howMuchILoveYou(282))
+
