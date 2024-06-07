@@ -416,3 +416,19 @@
 
 // console.log(howMuchILoveYou(282))
 
+// const a = [2,3,10]
+// const b = [19,24,9]
+// const x = []
+// let mult = a[0] * a[1] *a[2]
+// let mult2 = b[0] * b[1] * b[2]
+
+
+// console.log(mult - mult2)
+function check(a, x) {
+    for (let elemento of a) {
+     if(elemento === x) {
+        return true
+     }
+    }
+  }
+  console.log(check ([2,3,4], 3))
