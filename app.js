@@ -423,12 +423,30 @@
 // let mult2 = b[0] * b[1] * b[2]
 
 
-// console.log(mult - mult2)
-function check(a, x) {
-    for (let elemento of a) {
-     if(elemento === x) {
-        return true
-     }
-    }
-  }
-  console.log(check ([2,3,4], 3))
+// // console.log(mult - mult2)
+// function check(a, x) {
+//     for (let elemento of a) {
+//      if(elemento === x) {
+//         return true
+//      }
+//     }
+//   }
+//   console.log(check ([2,3,4], 3))
+
+const word = ["RafaELa"]
+const wordSeparada = word.toString().split('')
+
+console.log(wordSeparada)
+
+const wordSeparadaMaiuscula = word.toString().toUpperCase().split('')
+console.log(wordSeparadaMaiuscula)
+
+const novoArray = []
+
+for(let i =0; i<wordSeparada.length; i++) {
+if(wordSeparada[i] === wordSeparadaMaiuscula[i]) {
+   novoArray.push(i);
+}}
+
+console.log(novoArray)
+aaa
