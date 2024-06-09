@@ -433,20 +433,36 @@
 //   }
 //   console.log(check ([2,3,4], 3))
 
-const word = ["RafaELa"]
-const wordSeparada = word.toString().split('')
+// const word = ["RafaELa"]
+// const wordSeparada = word.toString().split('')
 
-console.log(wordSeparada)
+// console.log(wordSeparada)
 
-const wordSeparadaMaiuscula = word.toString().toUpperCase().split('')
-console.log(wordSeparadaMaiuscula)
+// const wordSeparadaMaiuscula = word.toString().toUpperCase().split('')
+// console.log(wordSeparadaMaiuscula)
 
-const novoArray = []
+// const novoArray = []
 
-for(let i =0; i<wordSeparada.length; i++) {
-if(wordSeparada[i] === wordSeparadaMaiuscula[i]) {
-   novoArray.push(i);
-}}
+// for(let i =0; i<wordSeparada.length; i++) {
+// if(wordSeparada[i] === wordSeparadaMaiuscula[i]) {
+//    novoArray.push(i);
+// }}
 
-console.log(novoArray)
-aaa
+// console.log(novoArray)
+// aaa
+
+function finalGrade (exam, projects) {
+   let notaFinal
+   
+   if (exam > 90 || projects > 10) {
+     notaFinal = 100
+   } else if( exam > 75 || projects >= 5) {
+     notaFinal = 90
+   } else if (exam > 50 || projects >= 2) {
+     notaFinal = 75
+   } else if (exam < 50 || projects < 2) {
+     notaFinal = 0
+   }
+   
+   return notaFinal
+ }
